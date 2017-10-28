@@ -61,5 +61,5 @@ Here is a pumpkin piano I made for Halloween.  Any wet object, like fruits and v
 ![Fritzing Diagram](https://user-images.githubusercontent.com/4665046/32137972-67cdc210-bbf8-11e7-9984-8f6c99b6d89f.png)
 
 # Tips
-* For best touch sensitivity, minimize distance between fruit and capacitive touch sensor.  For small fruit like apples, no more than two or three feet.  For large objects like pumpkins, 8 inches or less.
-* Protect your neopixels with a capacitor [see *Adafruit Powering NeoPixels* guide](https://learn.adafruit.com/adafruit-neopixel-uberguide/powering-neopixels)
+* For best touch sensitivity, minimize distance between fruit and capacitive touch sensor.  For small fruit like apples, no more than two or three feet.  For large objects like pumpkins, 8 inches or less.  Instead of placing the capacitive touch sensor on the breadboard, run long wires (I used cat5 cable) from the breadboard to the table with your fruit, then wire up the capacitive touch sensor as close as possible to the fruit.
+* Protect your neopixels with a capacitor and read the [*Adafruit NeoPixel Überguide - Powering Neopixels section](https://learn.adafruit.com/adafruit-neopixel-uberguide/powering-neopixels)
