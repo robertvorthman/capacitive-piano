@@ -50,7 +50,7 @@ Here is a pumpkin piano I made for Halloween.  Any wet object, like fruits and v
 (Sudo is required for python to access the GPIO pins)
 
 ### Automatically Run at Startup
-* Install [pm2] (https://github.com/Unitech/pm2)
+* Install [pm2](https://github.com/Unitech/pm2)
 * ``` sudo pm2 start piano.py ```
 * ``` sudo pm2 save ```
 * ```sudo reboot ```
