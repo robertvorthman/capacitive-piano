@@ -5,6 +5,7 @@ Create your own fruit piano with this python script.  Place 12 apples on a table
 [YouTube Video](https://www.youtube.com/watch?v=bnpva2UnOGU)
 
 Here is a pumpkin piano I made for Halloween.  Any wet object, like fruits and vegatables will work, as well as metal objects like aluminium foil.
+
 ![piano](https://user-images.githubusercontent.com/4665046/32136897-a5a1127c-bbe4-11e7-8ae4-c0daf9b120b0.gif)
 
 ## Features
@@ -40,8 +41,12 @@ Here is a pumpkin piano I made for Halloween.  Any wet object, like fruits and v
 
 # Usage
 * Install the above software libraries
+* Edit piano.py
+	* fluidsynth.init('path/to/your/soundfont.sf2')
+	* LED_COUNT = (number of neopixels)
+	* LED_STRIP = (type of neopixel strip)
 * run ``` sudo python piano.py ``` from terminal
-Sudo is required for GPIO access
+(Sudo is required for python to access the GPIO pins)
 
 ### Automatically Run at Startup
 * Install [pm2] (https://github.com/Unitech/pm2)
@@ -54,3 +59,6 @@ Sudo is required for GPIO access
 ## Diagram
 ![Fritzing Diagram](https://user-images.githubusercontent.com/4665046/32137972-67cdc210-bbf8-11e7-9984-8f6c99b6d89f.png)
 
+# Tips
+* For best touch sensitivity, minimize distance between fruit and capacitive touch sensor.  For small fruit like apples, no more than two or three feet.  For large objects like pumpkins, 8 inches or less.
+* Protect your neopixels with a capacitor [see *Adafruit Powering NeoPixels* guide](https://learn.adafruit.com/adafruit-neopixel-uberguide/powering-neopixels)
