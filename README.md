@@ -45,6 +45,7 @@ Here is a pumpkin piano I made for Halloween.  Any wet object, like fruits and v
 	* fluidsynth.init('path/to/your/soundfont.sf2')
 	* LED_COUNT = (number of neopixels)
 	* LED_STRIP = (type of neopixel strip)
+	* lightSegments = (array of which neopixels should illuminate for each key)
 * run ``` sudo python piano.py ``` from terminal
 (Sudo is required for python to access the GPIO pins)
 
