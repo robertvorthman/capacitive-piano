@@ -1,6 +1,11 @@
 # Capacitive Piano
 
-Create your own fruit piano with this python script.  Place 12 apples on a table (or any conductive object) and create your own midi piano with light effects.
+Create your own fruit piano with this python script.  Place 12 apples on a table and create your own midi piano with light effects.
+
+[YouTube Video](https://www.youtube.com/watch?v=bnpva2UnOGU)
+
+Here is a pumpkin piano I made for Halloween.  Any wet object, like fruits and vegatables will work, as well as metal objects like aluminium foil.
+![piano](https://user-images.githubusercontent.com/4665046/32136897-a5a1127c-bbe4-11e7-8ae4-c0daf9b120b0.gif)
 
 ## Features
 
@@ -18,13 +23,15 @@ Create your own fruit piano with this python script.  Place 12 apples on a table
 * Breadboard
 * Speaker (must be amplified, HDMI cable to TV/receiver sounds great, headphone jack has a little background noise but is tolerable)
 
-## Optional Hardware
-* Neopixel string or strip (addressable LEDs such as WS2812 lights)
-	* [I used this 50 LED string](https://www.aliexpress.com/item/50x-WS2812B-Pre-soldered-leds-with-wire-5V-WS2812-IC-Built-in-12cm-Wire-Addressable-Idividually/32243084800.html)
-    * I also tested a 144 LED WS2812B strip
+## Neopixel Hardware
+* Neopixel [string](https://www.aliexpress.com/item/50x-WS2812B-Pre-soldered-leds-with-wire-5V-WS2812-IC-Built-in-12cm-Wire-Addressable-Idividually/32243084800.html) or [strip](https://www.amazon.com/ALITOVE-Individually-Addressable-Flexible-Waterproof/dp/B01DLYSH6U) (addressable LEDs such as WS2812 lights)
 * Neopixel power supply [see *Adafruit Powering NeoPixels* guide](https://learn.adafruit.com/adafruit-neopixel-uberguide/powering-neopixels)
-* Logic level shifter to convert 3.3v from Raspberry Pi to 5v required to drive neopixels
+* [Logic level shifter](https://www.aliexpress.com/item/10pcs-lot-UART-SPI-4-Channel-IIC-I2C-Logic-Level-Converter-Bi-Directional-Module-5V-to/32805164795.html) to convert 3.3v to 5v. **Required** for driving neopixels from a 3.3v source like a Raspberry Pi.
+* [Capacitor](https://www.aliexpress.com/item/20PCS-25V-1000UF-Aluminum-electrolytic-capacitor-25-V-1000-UF-25V-1000UF-size-10-17mm/32725883192.html) (1000 µF, 6.3V or higher) to protect the neopixels from being damaged by initial onrush of current
+
+## Optional Hardware
 * Momentary button (if switching between multiple instruments)
+* 10k resistor
 
 ## Software Libraries
 * [Adafruit_MPR121](https://github.com/adafruit/Adafruit_MPR121) 12-key capacitive touch sensor
@@ -44,4 +51,6 @@ Sudo is required for GPIO access
 * piano.py will run at startup, neopixels will blink orange when piano is ready
 
 # Construction
-Coming soon
+## Diagram
+![Fritzing Diagram](https://user-images.githubusercontent.com/4665046/32137972-67cdc210-bbf8-11e7-9984-8f6c99b6d89f.png)
+
