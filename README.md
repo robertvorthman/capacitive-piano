@@ -1,10 +1,6 @@
 # Capacitive Piano
 
-Create your own fruit piano with this python script.  Place 12 apples on a table and create your own midi piano with light effects.
-
-[YouTube Video](https://www.youtube.com/watch?v=bnpva2UnOGU)
-
-Here is a pumpkin piano I made for Halloween.  Any wet object, like fruits and vegatables will work, as well as metal objects like aluminium foil.
+Create your own fruit piano with this python script.  Place 12 apples on a table and create your own midi piano with light effects. [YouTube Video](https://www.youtube.com/watch?v=bnpva2UnOGU)
 
 ![piano](https://user-images.githubusercontent.com/4665046/32136897-a5a1127c-bbe4-11e7-8ae4-c0daf9b120b0.gif)
 
@@ -14,7 +10,7 @@ Here is a pumpkin piano I made for Halloween.  Any wet object, like fruits and v
  * **High Quality Audio** using .sf2 sound fonts and fluidsynth midi synthesizer
  * **HDMI or Analog Audio** use an HDMI cable or the headphone jack for audio
  * **Sustain** Hold down a piano key to sustain instruments like pipe organs
- * **Mode Switch** Connect an optional switch to at GPIO pin and switch between different instruments or even drum kits
+ * **Mode Switch** Connect an optional switch to at GPIO pin and switch between different instruments or even drum kits [**YouTube demo of various modes**](https://www.youtube.com/watch?v=unna7pvTs5E)
  * **Light Effects** Add neopixel lights and each piano key will light up when pressed
 
 ## Required Hardware
@@ -68,7 +64,6 @@ A .sf2 file contains dozens or hundreds of instruments, from pianos to drum kits
 ```fluidsynth.set_instrument(1, 48, 128)```
 ![Polyphone](https://user-images.githubusercontent.com/4665046/32144431-14d80a6a-bc8f-11e7-84b1-80e63dfbcf76.png)
 
-
 # Construction
 #### Diagram
 ![Fritzing Diagram](https://user-images.githubusercontent.com/4665046/32137972-67cdc210-bbf8-11e7-9984-8f6c99b6d89f.png)
@@ -86,3 +81,5 @@ A .sf2 file contains dozens or hundreds of instruments, from pianos to drum kits
 * For best touch sensitivity, minimize distance between fruit and capacitive touch sensor.  For small fruit like apples, no more than two or three feet.  For large objects like pumpkins, 8 inches or less.  Instead of placing the capacitive touch sensor on the breadboard, run long wires (I used cat5 cable) from the breadboard to the table with your fruit, then wire up the capacitive touch sensor as close as possible to the fruit.
 * The capacitive touch sensor calibrates when initialized, so do not touch the fruit while starting piano.py until the lights flash orange.  If one of the fruit is stuck on, or unresponsive, stop the script (Ctrl+C) and restart it ```sudo python piano.py``` to recalibrate the sensitivity.
 * Protect your neopixels with a capacitor and read the [*Adafruit NeoPixel Überguide - Powering Neopixels section](https://learn.adafruit.com/adafruit-neopixel-uberguide/powering-neopixels)
+
+This is my first Python project so I'm sure the code could be more elegant.
