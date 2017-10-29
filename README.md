@@ -10,11 +10,12 @@ Here is a pumpkin piano I made for Halloween.  Any wet object, like fruits and v
 
 ## Features
 
- * **Simultaneous key presses** Play 12 notes at the same time
- * **High quality audio** using .sf2 sound fonts and fluidsynth midi synthesizer
+ * **Simultaneous Key Presses** Play 12 notes at the same time
+ * **High Quality Audio** using .sf2 sound fonts and fluidsynth midi synthesizer
+ * **HDMI or Analog Audio** use an HDMI cable or the headphone jack for audio
  * **Sustain** Hold down a piano key to sustain instruments like pipe organs
  * **Mode Switch** Connect an optional switch to at GPIO pin and switch between different instruments or even drum kits
- * **Light effects** Add neopixel lights and each piano key will light up when pressed
+ * **Light Effects** Add neopixel lights and each piano key will light up when pressed
 
 ## Required Hardware
 * Raspberry Pi 3
