@@ -37,11 +37,13 @@ Here is a pumpkin piano I made for Halloween.  Any wet object, like fruits and v
 
 ## Software Libraries
 * [Adafruit_MPR121](https://github.com/adafruit/Adafruit_MPR121) 12-key capacitive touch sensor
+* [fluidsynth](https://github.com/FluidSynth/fluidsynth/wiki/GettingStarted)
 * [python-mingus](http://bspaans.github.io/python-mingus/) midi synthesizer
 * [rpi_ws281x](https://github.com/jgarff/rpi_ws281x) neopixel lights
 
 # Usage
 * Install the above software libraries
+	*For example: ```sudo apt-get install fluidsynth``` to install fluidsynth
 * Edit piano.py
 	* fluidsynth.init('path/to/your/soundfont.sf2')
 	* LED_COUNT = (number of neopixels)
@@ -56,6 +58,16 @@ Here is a pumpkin piano I made for Halloween.  Any wet object, like fruits and v
 * ``` sudo pm2 save ```
 * ```sudo reboot ```
 * piano.py will run at startup, neopixels will blink orange when piano is ready
+
+## Sound Fonts
+
+A sound font (.sf2 file) is required for generating audio.  .sf3 files won't work with fluidsynth.  Installing ``fluidsynth using apt-get``` should also download the default sound font to ```/usr/share/sounds/sf2/FluidR3_GM.sf2``` but you can download other sound fonts from [this link](https://musescore.org/en/handbook/soundfonts#list).  I used the *Arachno* sound font.  Larger .sf2 files like *Timbres of Heaven* caused an out of memory error when attempting to run piano.py.  
+
+### Sound Font Instruments and Banks
+A .sf2 file contains dozens or hundreds of instruments, from pianos to drum kits, sometimes organized into seperate "banks".  To find an instrument I liked, I use a free program called [Polyphone](http://polyphone-soundfonts.com/) to open the .sf2 file and browse each instrument.  Clicking the keyboard at the top right of Polyphone lets you preview what each note will sound like.  Once you find an instrument you like, note the preset and bank number, and enter these numbers into the piano.py.  For example, the Arachno sound font has an orchestra drum kit as preset 48 in bank 128.  So to load this instrument into your piano as channel 1, use the following line of code:
+```fluidsynth.set_instrument(1, 48, 128)```
+![Polyphone](https://user-images.githubusercontent.com/4665046/32144431-14d80a6a-bc8f-11e7-84b1-80e63dfbcf76.png)
+
 
 # Construction
 ## Diagram
