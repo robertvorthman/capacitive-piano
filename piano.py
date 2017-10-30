@@ -87,7 +87,7 @@ if not cap.begin():
     print 'Error initializing MPR121.  Check your wiring!'
     sys.exit(1)
 
-#plays note and turns off neopixels
+#plays note and turns on neopixels
 def activateKey(key):
     if currentMode > 0 or key > 3:
         fluidsynth.play_Note(Note(notes[currentMode][key]), modeChannels[currentMode], 70)
