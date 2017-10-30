@@ -13,6 +13,27 @@ Create your own fruit piano with this python script.  Place 12 apples on a table
  * **Mode Switch** Connect an optional switch to at GPIO pin and switch between different instruments or even drum kits [**YouTube demo of various modes**](https://www.youtube.com/watch?v=unna7pvTs5E)
  * **Light Effects** Add neopixel lights and each piano key will light up when pressed
 
+# Construction
+
+#### Overview
+![piano - overview - annotated](https://user-images.githubusercontent.com/4665046/32144803-8aa0f4d2-bc94-11e7-9233-869050c66674.jpg)
+
+#### Close Up
+![piano - close up - annotated](https://user-images.githubusercontent.com/4665046/32144804-8aa8ab28-bc94-11e7-8b34-8f40a3557775.jpg)
+
+#### Breadboard
+![piano - breadboard - annotated](https://user-images.githubusercontent.com/4665046/32144853-75433cfc-bc95-11e7-9d2d-66ef99f59182.jpg)
+
+#### Diagram
+![Fritzing Diagram](https://user-images.githubusercontent.com/4665046/32137972-67cdc210-bbf8-11e7-9984-8f6c99b6d89f.png)
+
+# Tips
+* For best touch sensitivity, minimize distance between fruit and capacitive touch sensor.  For small fruit like apples, no more than two or three feet.  For large objects like pumpkins, 8 inches or less.  Instead of placing the capacitive touch sensor on the breadboard, run long wires (I used cat5 cable) from the breadboard to the table with your fruit, then wire up the capacitive touch sensor as close as possible to the fruit.
+* The capacitive touch sensor calibrates when initialized, so do not touch the fruit while starting piano.py until the lights flash orange.  If one of the fruit is stuck on, or unresponsive, stop the script (Ctrl+C) and restart it ```sudo python piano.py``` to recalibrate the sensitivity.
+* Protect your neopixels with a capacitor and read the [*Adafruit NeoPixel Überguide - Powering Neopixels section](https://learn.adafruit.com/adafruit-neopixel-uberguide/powering-neopixels)
+
+This is my first Python project so I'm sure the code could be more elegant.
+
 ## Required Hardware
 * Raspberry Pi 3
 * [MPR121 12-key capacitive touch sensor](https://www.amazon.com/gp/product/B00SK8PVNA/ref=oh_aui_search_detailpage)
@@ -63,23 +84,3 @@ A sound font (.sf2 file) is required for generating audio.  .sf3 files won't wor
 A .sf2 file contains dozens or hundreds of instruments, from pianos to drum kits, sometimes organized into seperate "banks".  To find an instrument I liked, I use a free program called [Polyphone](http://polyphone-soundfonts.com/) to open the .sf2 file and browse each instrument.  Clicking the keyboard at the top right of Polyphone lets you preview what each note will sound like.  Once you find an instrument you like, note the preset and bank number, and enter these numbers into the piano.py.  For example, the Arachno sound font has an orchestra drum kit as preset 48 in bank 128.  So to load this instrument into your piano as channel 1, use the following line of code:
 ```fluidsynth.set_instrument(1, 48, 128)```
 ![Polyphone](https://user-images.githubusercontent.com/4665046/32144431-14d80a6a-bc8f-11e7-84b1-80e63dfbcf76.png)
-
-# Construction
-#### Diagram
-![Fritzing Diagram](https://user-images.githubusercontent.com/4665046/32137972-67cdc210-bbf8-11e7-9984-8f6c99b6d89f.png)
-
-#### Overview
-![piano - overview - annotated](https://user-images.githubusercontent.com/4665046/32144803-8aa0f4d2-bc94-11e7-9233-869050c66674.jpg)
-
-#### Close Up
-![piano - close up - annotated](https://user-images.githubusercontent.com/4665046/32144804-8aa8ab28-bc94-11e7-8b34-8f40a3557775.jpg)
-
-#### Breadboard
-![piano - breadboard - annotated](https://user-images.githubusercontent.com/4665046/32144853-75433cfc-bc95-11e7-9d2d-66ef99f59182.jpg)
-
-# Tips
-* For best touch sensitivity, minimize distance between fruit and capacitive touch sensor.  For small fruit like apples, no more than two or three feet.  For large objects like pumpkins, 8 inches or less.  Instead of placing the capacitive touch sensor on the breadboard, run long wires (I used cat5 cable) from the breadboard to the table with your fruit, then wire up the capacitive touch sensor as close as possible to the fruit.
-* The capacitive touch sensor calibrates when initialized, so do not touch the fruit while starting piano.py until the lights flash orange.  If one of the fruit is stuck on, or unresponsive, stop the script (Ctrl+C) and restart it ```sudo python piano.py``` to recalibrate the sensitivity.
-* Protect your neopixels with a capacitor and read the [*Adafruit NeoPixel Überguide - Powering Neopixels section](https://learn.adafruit.com/adafruit-neopixel-uberguide/powering-neopixels)
-
-This is my first Python project so I'm sure the code could be more elegant.
