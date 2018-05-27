@@ -68,6 +68,7 @@ This is my first Python project so I'm sure the code could be more elegant.
 	* LED_COUNT = (number of neopixels)
 	* LED_STRIP = (type of neopixel strip)
 	* lightSegments = (array of which neopixels should illuminate for each key)
+* Might have to edit /etc/asound.conf with default audio card
 * run ``` sudo python piano.py ``` from terminal
 (Sudo is required for python to access the GPIO pins)
 
