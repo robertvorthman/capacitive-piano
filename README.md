@@ -59,6 +59,7 @@ This is my first Python project so I'm sure the code could be more elegant.
 * [rpi_ws281x](https://github.com/jgarff/rpi_ws281x) neopixel lights
 
 # Usage
+* [Enable i2c support in Raspian](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c#installing-kernel-support-manually)
 * Install the above software libraries
 	*```sudo apt-get install fluidsynth``` to install fluidsynth
 	*```sudo pip install mingus``` to install Mingus
