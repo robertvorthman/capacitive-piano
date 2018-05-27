@@ -61,7 +61,7 @@ This is my first Python project so I'm sure the code could be more elegant.
 # Usage
 * Install the above software libraries
 	*```sudo apt-get install fluidsynth``` to install fluidsynth
-	*```pip install mingus``` to install Mingus
+	*```sudo pip install mingus``` to install Mingus
 * Edit piano.py
 	* fluidsynth.init('path/to/your/soundfont.sf2')
 	* LED_COUNT = (number of neopixels)
