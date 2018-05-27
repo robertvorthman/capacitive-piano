@@ -53,7 +53,7 @@ This is my first Python project so I'm sure the code could be more elegant.
 * 10k resistor
 
 ## Software Libraries
-* [Adafruit_MPR121](https://github.com/adafruit/Adafruit_MPR121) 12-key capacitive touch sensor
+* [Adafruit_MPR121](https://learn.adafruit.com/mpr121-capacitive-touch-sensor-on-raspberry-pi-and-beaglebone-black/software) 12-key capacitive touch sensor
 * [fluidsynth](https://github.com/FluidSynth/fluidsynth/wiki/GettingStarted)
 * [python-mingus](http://bspaans.github.io/python-mingus/) midi synthesizer
 * [rpi_ws281x](https://github.com/jgarff/rpi_ws281x) neopixel lights
