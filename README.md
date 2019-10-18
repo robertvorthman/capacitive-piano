@@ -61,8 +61,14 @@ This is my first Python project so I'm sure the code could be more elegant.
 # Usage
 * [Enable i2c support in Raspian](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c#installing-kernel-support-manually)
 * Install the above software libraries
+	* ```sudo pip install Adafruit-MPR121``` to install the MPR121 sensor library
 	* ```sudo apt-get install fluidsynth``` to install fluidsynth
 	* ```sudo pip install mingus``` to install Mingus
+	* ```git clone https://github.com/jgarff/rpi_ws281x```
+	 * ```cd rpi_ws281x```
+	 * ```scons```
+	 * ```cd python```
+	 * ```sudo python setup.py install``` 
 * Edit piano.py
 	* fluidsynth.init('path/to/your/soundfont.sf2')
 	* LED_COUNT = (number of neopixels)
